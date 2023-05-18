@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background: rgb(236, 144, 17);
+}
+
+/* start button */
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .5s all ease-out;
+}
+
+/* css property for JS addclass event*/
+.info_box.activeinfo,
+.info_box.activequiz{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50% -50%) scale(1);
+}
+/* ---------------------------------------- */
+
+
+.start_btn button{
+    font-weight: 600;
+    padding: 15px 20px;
+    border:none;
+    border-radius: 5px;
+    outline: none;
+    color: darkgoldenrod;
+    cursor: pointer;
+
+    /* opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% -50%) scale(0.9); */
+}
+
+/* info area */
+.info_box{
+    width: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 100px;
+
+    opacity: 0;
+    /* pointer-events: none; */
+    /* transform: translate(-50% -50%) scale(0.9); */
+}
+
+.info_title{
+    height: 60px;
+    border-bottom: 2px solid #000;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px 50px;
+}
+.info_list{
+    padding: 15px 30px;
+
+}
+.info{
+    margin: 5px 0;
+    font-size: 18px;
+    line-height: 30px;
+}
+.info span{
+    color: darkgoldenrod;
+    font-weight: 800;
+    font-size: 20px;
+}
+.info_box .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 2px solid #000;
+}
+.buttons button{
+    margin:  0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid darkgoldenrod;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s all ease-out;
+    outline: none;
+}
+.buttons button.exit{
+    color: red;
+}
+.buttons button.continue{
+    color: green;
+}
+button.continue:hover{
+    background: green;
+    color: white;
+}
+button.exit:hover{
+    background: red;
+    color: white;
+}
+
+/* Quiz area */
+.quiz_box{
+    width: 550px;
+    background: white;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    /* border-top-right-radius: 100px; */
+
+    opacity: 0;
+    /* pointer-events: none; */
+    /* transform: translate(-50% -50%) scale(0.9); */
+}
+header{
+    position: relative;
+    /* z-index: 99; */
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.title{
+    font-size: 30px;
+    font-weight: 600;
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background-color: darkgoldenrod;
+    border: 0;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.timer_text{
+    user-select: none;
+    font-size: 18px;
+}
+.timer_sec{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    height: 30px;
+    width: 45px;
+    text-align: center;
+    line-height: 30px;
+    border: 0;
+    user-select: none;
+}
+
+section{
+    padding: 25px 30px 20px 30px;
+    background-color: #fff;
+}
+
+.que_text{
+    font-size: 30px;
+    font-weight: 600;
+}
+.option_list{
+    padding: 20px 0;
+    display: block;
+}
+.option{
+    background: rgba(135, 133, 133, 0.367);
+    border: 2px solid rgb(125, 113, 80);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+.option:last-child{
+    margin-bottom: 0;
+}
+.option:hover{
+    color: white;
+    background: rgb(43, 36, 36);
+}
+.option_list .option .icon{
+    height: 30px;
+    width: 30px;
+    border: 2px solid ;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    pointer-events: none;
+    font-size: 15px;
+}
+.option_list .option .icon.tick{
+    color: green;
+    border-color: green;
+    background: darkgoldenrod;
+}
+.option_list .option .icon.cross{
+    color: red;
+    border-color: red;
+    background: darkgoldenrod;
+    padding: 0 3px;
+}
+
+footer{
+    height: 60px;
+    /* width: 100%; */
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total_que span{
+    display: flex;
+    user-select: none;
+}
+.total_que span p{
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+.next_btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    background: darkgoldenrod;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:  .5s ease-out;
+}
+.next_btn:hover{
+    background: green;
+}
+
+/* result box */
+.result_box{
+    background: #fff;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    opacity: 0;
+    /* pointer-events: none; */
+    /* transform: translate(-50% -50%) scale(0.9); */
+}
+.result_box .icon{
+    font-size: 150px;
+    color: darkgoldenrod;
+    margin: 0 0 12px 0;
+}
+.result_box .complete_text{
+    font-size: 20px;
+    font-weight: 600;
+}
+.result_box .score_text span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.score_text span p{
+    font-weight: 600;
+    padding: 0 4px;
+}
+.button_2{
+    display: flex;
+    margin: 20px 0;
+}
+.button_2 button{
+    margin: 0 10px;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.restart{
+    color: #fff;
+    background: green;
+}
+.quit{
+    color: #fff;
+    background: red;
+}

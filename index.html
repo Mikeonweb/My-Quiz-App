@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>my quiz app</title>
+</head>
+<body>
+    <!-- quiz start button -->
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <!-- info box -->
+    <div class="info_box">
+        <div class="info_title">
+            <span>Quiz Rules</span>
+        </div>
+
+        <div class="info_list">
+            <div class="info">1. When timer runs out all options are locked</div>
+            <div class="info">2. You can not exit while Quiz is in progress</div>
+            <div class="info">3. You can not select more than one option</div>
+            <div class="info">4. Each question should be answered within <span>20 seconds</span></div>
+            <div class="info">5. Accumulated points will be awarded after the end of Quiz</div>
+        </div>
+
+        <div class="buttons">
+            <button class="exit">Exit Quiz</button>
+            <button class="continue">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Area -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">My Quiz App</div>
+            <div class="timer">
+                <div class="timer_text">Time Left</div>
+                <div class="timer_sec">20</div>
+            </div>
+        </header>
+
+        <section>
+            <div class="que_text">
+                <span>What does HTML stand for?</span>
+            </div>
+            <div class="option_list">
+                <div class="option">
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    <div class="icon tick"><i class="fa fa-check"></i></div>
+                </div>
+
+                <div class="option">
+                    <span>sit at itaque beatae, distinctio quasi, atque vel laudantium? Alias, quod.</span>
+                    <div class="icon cross"><i class="fa fa-times"></i></div>
+                </div>
+
+                <div class="option">
+                    <span>sit at itaque beatae, distinctio quasi, atque vel laudantium? Alias, quod.</span>
+                </div>
+
+                <div class="option">
+                    <span>sit at itaque beatae, distinctio quasi, atque vel laudantium? Alias, quod.</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="total_que">
+                <span><p>2</p>Of<p>3</p> Questions</span>
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </div>
+
+    <!-- result box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fa fa-thumbs-up"></i>
+        </div>
+        <div class="complete_text">Awesome! you have completed your Quiz Session</div>
+        <div class="score_text">
+            <span>you scored <p>2</p> out of <p>3</p></span>
+        </div>
+        <div class="button_2">
+            <button class="restart">Restart Quiz</button>
+            <button class="quit"> Quit Quiz</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <script src="questions.js"></script>
+</body>
+</html>
